@@ -1,0 +1,37 @@
+1. Create the Folder class
+-should have the following attributes:
+--self.name = folder_name
+--self.files = []
+--self.subfolders = []
+2. Add the methods associated with the Folder class
+-add_file- accessible from the menu
+--adds files to files list
+-add_subfolder- accessible from the menu
+--checks if subfolder already exists by name
+---if not, adds subfolder to subfolder list
+-__count_files (Recursively)(private): counts all the files
+-__eq__:compares if folder and string are equal by name
+-__len__:returns total number of folder objects
+-__str__:returns string representation of the folder including:
+--folder name, its files, and subfolders
+---recursively calls __str__ on subfolders with increased indentation
+3. Create File Manager Class
+-should have the follow attributes:
+--self.root_folder: This is the start folder
+--self.current_folder: This is the uses current folder
+4. Add the methods associated with the File Manager class
+-select_folder- accessible from the menu
+--looks for subfolder name and makes current folder
+-start(): interactive menu that manages files and folders
+--displays menu options and takes user input and executes the corresponding actions
+--option 1: add a file
+--option 2: add a subfolder
+--option 3: navigate to a subfolder
+--option 4: Print the entire folder hierarchy
+--option 5: Print the total number of objects (files + subfolder)
+--option 6: Exit the program
+5. Program execution
+-Create an instance of fileManager with the default root folder.
+-calls start() method to begin the interactive menu.
+
+
